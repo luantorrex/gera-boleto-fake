@@ -10,10 +10,10 @@ def print_custom_data(recipient_name, payer_name, value):
     fixed_bank_branch_and_code = '1234/123456'
 
     # Abrir o boleto "base"
-    base_boleto = Image.open('base_boleto.jpg')
+    base_boleto = Image.open('sources/base_boleto.jpg')
 
     # Escolha da fonte
-    title_font = ImageFont.truetype('Lato-Regular.ttf', 13)
+    title_font = ImageFont.truetype('sources/Lato-Regular.ttf', 13)
 
     # Variável de interação com a imagem
     image_editable = ImageDraw.Draw(base_boleto)
@@ -40,4 +40,4 @@ def print_custom_data(recipient_name, payer_name, value):
     # Printando Valor
     image_editable.text((660,198), "%.2f" % value, (0, 0, 0), font=title_font)
 
-    base_boleto.save("result.jpg")
+    base_boleto.save("billet.pdf")

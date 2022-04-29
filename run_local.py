@@ -1,3 +1,3 @@
-import app
+import billet_generator
 
-app.print_custom_data('Igreja de Teste', 'Fulano Testando', 350.5)
+billet_generator.print_custom_data('Igreja de Teste', 'Fulano Testando', 350.5)
